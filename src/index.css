@@ -1,0 +1,99 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  img {
+    width: 210px;
+    height: 295px;
+    object-fit: cover;
+  }
+  .link{
+    text-decoration: none;
+  }
+  /* Utilts */
+  .container {
+    max-width: 1170px;
+    margin: auto;
+  }
+  
+  .btn {
+    padding: 10px 17px;
+    border: 1px solid var(--dark-color);
+    background: var(--dark-color);
+    color: var(--offwhite-color);
+    margin: 1rem 0;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    color: var(--secondary-color);
+  }
+  
+  .btn-block {
+    display: block;
+    width: 100%;
+  }
+  
+  Link{
+    text-decoration: none;
+  }
+  
+ 
+  
+  /* Single Show Page Styles */
+  .singleshow {
+    display: flex;
+    margin: 2rem 0;
+  }
+  
+  .singleshow > img {
+    margin-right: 2rem;
+  }
+  
+  .singleshow__info p {
+    margin: 1rem 0;
+  }
+  
+  .singleshow__genre {
+    display: inline-block;
+    border-radius: 15px;
+    margin: 0.5rem 1rem 0.5rem 0;
+    padding: 10px 17px;
+    background: var(--secondary-color);
+    color: var(--offwhite-color);
+  }
+  
+  /* About page Styles */
+  .about {
+    margin: 2rem 0;
+    width: 100%;
+  }
+  
+  .about__title {
+    font-size: 2rem;
+    margin: 1rem;
+  }
+  
+  .about__info {
+    width: 500px;
+    margin: auto;
+  }
+  
+  .about__info > p {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+  }
+  
+  .about__info > div > ul > li {
+    margin-left: 2rem;
+    padding: 0.5rem;
+  }
