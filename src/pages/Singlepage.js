@@ -1,14 +1,16 @@
 import { useEffect, useContext } from "react";
-import { useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 // Context
 import ShowsContext from "../context/shows/showsContext";
 
 
 const Singlepage = ({ match }) => {
+  const history = useNavigate();
   const { getSingleShow, singleShow, loading } = useContext(ShowsContext);
   const { id } = useParams();
 
   useEffect(() => {
+    
     getSingleShow(id);
     console.log(getSingleShow(id));
 
@@ -23,6 +25,16 @@ const Singlepage = ({ match }) => {
     }
     return text.replace(/(<([^>]+)>)/gi, "");
   };
+
+  const book = (e) => {
+    e.preventDefault();
+
+        history(`/bookticket/${id}`)
+    
+
+    
+
+}
 
   return (
     <>
@@ -67,6 +79,8 @@ const Singlepage = ({ match }) => {
               )}
             </p>
             <p>Summary : {singleShow.summary && removeTags(singleShow.summary)}</p>
+            <button variant="primary" className='btn btn-danger m-4 ' onClick={book}  type="submit">Book Ticket</button>
+  
           </div>
         </div>
         </div>

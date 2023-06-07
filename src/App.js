@@ -1,15 +1,14 @@
-import { BrowserRouter as Router, Switch, Route, Routes, BrowserRouter } from "react-router-dom";
-import { useParams } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Routes, BrowserRouter} from "react-router-dom";
 
 
 // Components
 import Navbar from "./components/Navbar";
 
 // Pages
-import HomePage from "./pages/Homepage";
-import SinglePage from "./pages/Singlepage";
 import Homepage from "./pages/Homepage";
 import Singlepage from "./pages/Singlepage";
+import Form from "./pages/Form";
+import Done from "./pages/Done";
 
 const App = () => {
   return (
@@ -18,6 +17,8 @@ const App = () => {
       <Routes>
           <Route exact path="/" Component={Homepage} />
           <Route path="/singleshow/:id" Component={Singlepage} />
+          <Route path="/bookticket/:id" Component={Form} />
+          <Route path="/done" Component={Done} />
           </Routes>
       
       
