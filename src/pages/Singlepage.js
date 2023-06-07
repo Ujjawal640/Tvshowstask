@@ -3,8 +3,6 @@ import { useParams } from 'react-router-dom';
 // Context
 import ShowsContext from "../context/shows/showsContext";
 
-// Components
-import Loader from "../components/Loader";
 
 const Singlepage = ({ match }) => {
   const { getSingleShow, singleShow, loading } = useContext(ShowsContext);
@@ -28,9 +26,7 @@ const Singlepage = ({ match }) => {
 
   return (
     <>
-      {loading ? (
-        <Loader />
-      ) : (
+      
         <div className="singleshow row mx-5">
           <div className="col-lg-12 col-10">
           <img
@@ -70,11 +66,11 @@ const Singlepage = ({ match }) => {
                 "No offical site"
               )}
             </p>
-            <p>{singleShow.summary && removeTags(singleShow.summary)}</p>
+            <p>Summary : {singleShow.summary && removeTags(singleShow.summary)}</p>
           </div>
         </div>
         </div>
-      )}
+    
     </>
   );
 };

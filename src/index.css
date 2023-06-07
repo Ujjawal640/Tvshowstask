@@ -23,26 +23,7 @@
     max-width: 1170px;
     margin: auto;
   }
-  
-  .btn {
-    padding: 10px 17px;
-    border: 1px solid var(--dark-color);
-    background: var(--dark-color);
-    color: var(--offwhite-color);
-    margin: 1rem 0;
-    font-size: 20px;
-    cursor: pointer;
-  }
-  
-  .btn:hover {
-    color: var(--secondary-color);
-  }
-  
-  .btn-block {
-    display: block;
-    width: 100%;
-  }
-  
+
   Link{
     text-decoration: none;
   }

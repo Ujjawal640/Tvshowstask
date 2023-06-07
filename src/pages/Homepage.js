@@ -4,9 +4,8 @@ import { useContext, useEffect, useState } from "react";
 import ShowsContext from "../context/shows/showsContext";
 
 // Components
-import Searchbar from "../components/Searchbar";
 import ListItem from "../components/ListItem";
-import Loader from "../components/Loader";
+
 
 const Homepage = () => {
   const showsContext = useContext(ShowsContext);
@@ -26,10 +25,6 @@ const Homepage = () => {
   return (
     <div>
     <div className="row gy-3 mx-4 my-4">
-
-
-     
-    
     
         <div className="row">
           {shows.map((item) => (
@@ -41,10 +36,8 @@ const Homepage = () => {
                 item.show.image.original
               }
               name={item.show.name}
-              rating={
-                item.show.rating.average
-                ? item.show.rating.average
-                  : "No rating"
+              genres={
+                item.show.genres[0]
                   
               }
             />  

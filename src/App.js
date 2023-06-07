@@ -7,10 +7,8 @@ import Navbar from "./components/Navbar";
 
 // Pages
 import HomePage from "./pages/Homepage";
-import AboutPage from "./pages/Aboutpage";
 import SinglePage from "./pages/Singlepage";
 import Homepage from "./pages/Homepage";
-import Aboutpage from "./pages/Aboutpage";
 import Singlepage from "./pages/Singlepage";
 
 const App = () => {
@@ -19,7 +17,6 @@ const App = () => {
       <Navbar />
       <Routes>
           <Route exact path="/" Component={Homepage} />
-          <Route exact path="/about" Component={Aboutpage} />
           <Route path="/singleshow/:id" Component={Singlepage} />
           </Routes>
       
